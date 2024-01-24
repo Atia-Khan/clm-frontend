@@ -107,7 +107,7 @@ const Inbox = () => {
       userName: name,
       clientUserId,
       email: userEmail,
-      returnUrl: 'https://ccngl3z4-3000.inc1.devtunnels.ms/aftersigning',
+      returnUrl: `${process.env.REACT_APP_FRAME_ANCESTORS_URL}/aftersigning`,
       envelope_id,
     };
     const response = await axios.post(reqUrl, reqBody, {
