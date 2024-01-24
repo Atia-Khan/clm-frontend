@@ -155,7 +155,7 @@ const ReceiveDoc = () => {
       authenticationMethod: "none",
       userName: name,
       email: userEmail,
-      returnUrl: 'https://ccngl3z4-3000.inc1.devtunnels.ms/signed',
+      returnUrl: `${process.env.REACT_APP_FRAME_ANCESTORS_URL}/signed`,
       envelope_id,
     };
     const response = await axios.post(reqUrl, reqBody, {
